@@ -29,5 +29,7 @@ Game.resetTimer = Game.initTimer;
  * The player loses if the timer is finished
  */
 Game.timesUp = function() {
-	confirm('Time Is Up.', null, Game.restart);
+	var currentGame = Game.score.current;
+	get('#final_score').innerHTML = 'Time Is Up. You Finished With A Score Of ' + currentGame;
+	return currentGame;
 }

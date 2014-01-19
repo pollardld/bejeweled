@@ -69,3 +69,23 @@ h2 {
 #current_gauge {
     background: rgba(255,255,255,0.75);
 }
+
+#final_score {
+    color: $orange;
+    font-size: 1.5rem;
+    left: -20%;
+    position: relative;
+    text-align: center;
+    width: 140%;
+}
+
+#restart_bt {
+    background: rgba($slate, 0.5);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    padding: .5rem 1rem;
+    margin: 1rem auto;
+    position: relative;
+}

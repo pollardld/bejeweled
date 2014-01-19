@@ -12,7 +12,7 @@ Game.init = function () {
 	Game.gem = null;		// The currently selected gem
 	Game.moving = false;	// Are the gems moving or not ?
 	Game.score = {
-		goal: 5000,
+		goal: 30000,
 		current: 0
 	};
 	Game.bonus = {};
