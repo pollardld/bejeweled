@@ -1,0 +1,204 @@
+.item {
+    cursor: pointer;
+    height: 80px;
+    margin: 0;
+    position: absolute;
+    width: 80px;
+
+    span {
+      display: block;
+      position: relative;
+      pointer-events: none;
+    }
+}
+
+.gem0 {
+  
+  span {
+    background: $red;
+    height: 3rem;
+    top: 1rem;
+    width: 5rem;
+    
+    &:before {
+      border-left: 1rem solid transparent;
+      border-right: 1rem solid transparent;
+      border-bottom: 1rem groove $red;
+      top: -1rem;
+      left: 0;
+      width: 3rem;
+    }
+    
+    &:after {
+      border-left: 1rem solid transparent;
+      border-right: 1rem solid transparent;
+      border-top: 1rem ridge $red;
+      bottom: -1rem;
+      width: 3rem;
+    }
+  }
+}
+
+.gem1 {
+
+  span {
+    background: $gold;
+    height: 3.5rem;
+    left: .75rem;
+    top: .75rem;
+    width: 3.5rem;
+    @include vendor-prefix (transform, rotate(45deg));
+    
+    &:before {
+      background: rgba(255,255,255,0.25);
+      height: 1.5rem;
+      left: 1rem;
+      top: 1rem;
+      width: 1.5rem;
+    }
+    
+    &:after {
+      @extend :before;
+      @include vendor-prefix (transform, rotate(45deg));
+    }
+  }
+}
+
+.gem2 {
+
+  span {
+    border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+    border-bottom: 1rem solid $diamond;
+    width: 3rem;
+    
+    &:before {
+      top: 1rem;
+      left: -1rem;
+      border-left: 2.5rem solid transparent;
+      border-right: 2.5rem solid transparent;
+      border-top: 4rem solid $diamond;
+    }
+    
+    &:after {
+      top: 1rem;
+      left: 0rem;
+      border-left: 1.5rem solid transparent;
+      border-right: 1.5rem solid transparent;
+      border-top: 3.5rem solid rgba(255,255,255,0.25);
+    }
+  }
+}
+
+.gem3 {
+
+  span {
+    border-left: 2.5rem solid transparent;
+    border-right: 2.5rem solid transparent;
+    border-bottom: 5rem solid $blue;
+    height: 0;
+    width: 0;
+    
+    &:before {
+      border-left: 1.25rem solid transparent;
+      border-right: 1.25rem solid transparent;
+      border-bottom: 2.5rem solid rgba(255,255,255,0.25);
+      left: -1.25rem;
+      height: 0rem;
+      top: 1.75rem;
+      width: 0;
+    }
+    
+    &:after {
+      border-left: .75rem solid transparent;
+      border-right: .75rem solid transparent;
+      border-top: 1.25rem solid rgba($blue,0.375);
+      left: -.75rem;
+      height: 0rem;
+      top: 3rem;
+      width: 0;
+    }
+  }
+}
+
+.gem4 {
+
+  span {
+    background: $orange;
+    height: 2.5rem;
+    top: 1.25rem;
+    width: 5rem;
+    
+    &:before {
+      border-left: 2.5rem solid transparent;
+      border-right: 2.5rem solid transparent;
+      border-bottom: 1.25rem solid $orange;
+      left: 0;
+      height: 0rem;
+      top: -1.25rem;
+      width: 0;
+    }
+    
+    &:after {
+      @extend :before;
+      border-top: 1.25rem solid $orange;
+      border-bottom: none;
+      bottom: -1.25rem;
+      top: auto;
+    }
+    
+    &:nth-of-type(2) {
+      background: rgba(255,255,255,0.125);
+      height: 1rem;
+      position: absolute;
+      top: 2rem;
+      left: 1.5rem;
+      width: 2rem;
+      
+      &:before {
+        border-bottom: none;
+        border-top: .75rem solid rgba(255,255,255,0.125);
+        border-left: 1rem solid transparent;
+        border-right: 1rem solid transparent;
+        top: 1rem;
+      }
+      
+      &:after {
+        @extend :before;
+        bottom: 1rem;
+        border-top: none;
+        border-bottom: .75rem solid rgba(255,255,255,0.125);
+        top: auto;
+      }
+    }
+  }
+}
+
+.gem5 {
+
+  span {
+    background: rgba(245,245,245,1);
+    border: 1rem double rgba(255,255,255,0.75);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    
+    &:before {
+      border-left: 1.5rem solid rgba(255,255,255,0.875);
+      border-top: 1.5rem solid transparent;
+      border-bottom: 1.5rem solid transparent;
+      border-radius: 50%;
+      height: 0rem;
+      left: 0;
+      top: 0;
+      width: 1.5rem;
+    }
+    
+    &:after {
+      @extend :before;
+      border-left: none;
+      border-right: 1.5rem solid rgba(255,255,255,0.875);
+      right: 0;
+    }
+  }
+}

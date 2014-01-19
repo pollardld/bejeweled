@@ -1,0 +1,71 @@
+html {
+    font-size: 16px;
+}
+
+:before, :after {
+    content: '';
+    position: absolute;
+}
+
+body {
+	background: $aqua;
+    color: $slate;
+    font-family: $vollkorn;
+	margin: 0;
+	padding: 2rem 0;
+}
+
+main {
+	margin: 0 auto;
+    position: relative;
+	max-width: 40.5em;
+}
+
+h1 {
+    font-family: $vollkorn;
+    font-weight: normal;
+    font-size: 2.25em;
+    text-align: center;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 2rem;
+    margin: 0 auto;
+    text-align: right;
+    width: 40%;
+
+    span {
+        float: left;
+        font-size: 1.5rem;
+        padding-right: 20px;
+    }
+}
+
+#grid {
+    height: 88px * 8;
+    position: relative;
+    width: 40.5rem;
+}
+
+#time_gauge {
+    bottom: 3.5rem;
+    height: 88px * 8;
+    left: -25px;
+    position: absolute;
+    width: 8px;
+    @include vendor-prefix (transform, rotate(180deg));
+
+    &:before {
+        bottom: -25px;
+        content: 'Time';
+        right: -15px;
+        position: absolute;
+        @include vendor-prefix (transform, rotate(180deg));
+    }
+}
+
+#current_gauge {
+    background: rgba(255,255,255,0.75);
+}
